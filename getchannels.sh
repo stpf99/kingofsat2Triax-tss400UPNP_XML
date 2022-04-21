@@ -7,6 +7,7 @@ SERVER="192.168.1.114"
 # cleanup old files
 rm *.php
 rm *.xml
+rm /tmp/pos*.xml
 P1=19.2E
 P2=28.2E
 P3=23.5E
@@ -30,11 +31,12 @@ python getchannels.py $SERVER pos-$P4.php 4
 cat *.xml >> allChannels.xml
 
 
-STR2="<?xml version="1.0" encoding="UTF-8"?><channelTable msys="DVB-S">"
-STR3="</channelTable>"
+STR2='<?xml version="1.0" encoding="UTF-8"?><channelTable msys="DVB-S">'
+STR3='</channelTable>'
 
 
-(echo $STR2 && cat pos-$ALL.xml) > /tmp/pos-$ALL.xml
-cat /tmp/pos-$ALL.xml > pos-$ALL.xml
+(echo $STR2 && cat pos-$P1.xml) > /tmp/pos-$P1.xml
+cat /tmp/pos-$P1.xml > pos-$P1.xml
 
-echo $3 >> $ALL.xml
+(cat pos-$P1.xml && echo $STR3) >> /tmp/posN-$P1.xml
+cat /tmp/posN-$P1.xml > pos-$P1.xml
