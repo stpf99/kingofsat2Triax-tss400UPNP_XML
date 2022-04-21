@@ -23,9 +23,6 @@ python getchannels.py $SERVER pos-13E.php 4
 
 # merge all xml files together
 cat *.xml >> allChannels.xml
-mkdir pos
-touch echo *.xml pos/
-echo "<?xml version="1.0" encoding="UTF-8"?><channelTable msys="DVB-S">" > pos/*.xml
-echo *.xml pos/*.xml
-echo "</channelTable>" >> pos/*.xml
+(echo "<?xml version="1.0" encoding="UTF-8"?><channelTable msys="DVB-S">" && cat *.xml) > X*.xml && echo  "</channelTable>" >> X*.xml
+
 
