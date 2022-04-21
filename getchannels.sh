@@ -7,7 +7,7 @@ SERVER="192.168.1.114"
 # cleanup old files
 rm *.php
 rm *.xml
-rm -r pos/
+
 # download PHP files from kingofsat
 wget https://de.kingofsat.net/pos-19.2E.php
 wget https://de.kingofsat.net/pos-28.2E.php
