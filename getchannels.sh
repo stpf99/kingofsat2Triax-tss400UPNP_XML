@@ -13,7 +13,6 @@ P2=28.2E
 P3=23.5E
 P4=13E
 
-ALL=(1,2,3,4, 'allChannels')
 # download PHP files from kingofsat
 wget https://de.kingofsat.net/pos-$P1.php
 wget https://de.kingofsat.net/pos-$P2.php
