@@ -6,9 +6,7 @@ import sys
 server = sys.argv[1] # newslave
 inputFilename = sys.argv[2] #"pos-13E.php"
 outputFilename = sys.argv[2].replace("php", "xml") #"13E_satip.xml"
-source = sys.argv[3] #"4"
-
-
+source = sys.argv[3] #
 
 newTransponder = 0
 newChannel = 0

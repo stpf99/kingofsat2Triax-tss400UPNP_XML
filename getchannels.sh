@@ -1,45 +1,53 @@
 #!/bin/bash
 
 # configure SATIP server name/IP address, here
-SERVER="192.168.1.114"
+SERVER="192.168.178.42"
 #SERVER="192.168.178.42"
-
+rm -r 1 2 3 4
+mkdir 1 2 3 4
 # cleanup old files
 rm *.php
 rm *.xml
-rm /tmp/pos*.xml
-P1=19.2E
-P2=28.2E
+rm /tmp/tv*.xml
+P1=13.0E
+P2=19.2E
 P3=23.5E
-P4=13E
-
+P4=28.2E
+#tv-13.0E-fta.php
 declare -a P
 P=($P1 $P2 $P3 $P4 )
 
 # download PHP files from kingofsat
-wget https://de.kingofsat.net/pos-$P1.php
-wget https://de.kingofsat.net/pos-$P2.php
-wget https://de.kingofsat.net/pos-$P3.php
-wget https://de.kingofsat.net/pos-$P4.php
+cd 1
+wget https://de.kingofsat.net/tv-$P1-fta.php
+python ../getchannels.py $SERVER tv-$P1-fta.php 1
+cd ..
+cd 2
+wget https://de.kingofsat.net/tv-$P2-fta.php
+python ../getchannels.py $SERVER tv-$P2-fta.php 2
+cd ..
+cd 3
+wget https://de.kingofsat.net/tv-$P3-fta.php
+python ../getchannels.py $SERVER tv-$P3-fta.php 3
+cd ..
+cd 4
+wget https://de.kingofsat.net/tv-$P4-fta.php
+python ../getchannels.py $SERVER tv-$P4-fta.php 4
+cd ..
 
+cp */*.xml .
 # call python script to extract channel information from php files and generate m3u files
 # the number at the end of the call is the satip src parameter (diseqc position)
-python getchannels.py $SERVER pos-$P1.php 1
-python getchannels.py $SERVER pos-$P2.php 2
-python getchannels.py $SERVER pos-$P3.php 3
-python getchannels.py $SERVER pos-$P4.php 4
-
-# merge all xml files together
+# add header and merge all xml files together
 STR2='<?xml version="1.0" encoding="UTF-8"?><channelTable msys="DVB-S">'
 STR3='</channelTable>'
 
 echo $STR2 > allChannels.xml
-cat pos-$P*.xml >> allChannels.xml
+cat tv-*.xml >> allChannels.xml
 echo $STR3 >> allChannels.xml
 
 for i in "${P[@]}";
 do
-(echo $STR2 && cat pos-$i.xml) > /tmp/pos-$i.xml && cat /tmp/pos-$i.xml > pos-$i.xml && (cat pos-$i.xml && echo $STR3) >> /tmp/posN-$i.xml && cat /tmp/posN-$i.xml > pos-$i.xml ;
+(echo $STR2 && cat tv-$i-fta.xml && echo $STR3) > /tmp/tv-$i-fta.xml && sed 's/&//g' /tmp/tv-$i-fta.xml > /tmp/tv-$i-fta-clean.xml && cat /tmp/tv-$i-fta-clean.xml > tv-$i-fta.xml && sed 's/&//g' allChannels.xml > SATIP_Channels.xml ;
 done
-
-
+rm allChannels.xml
