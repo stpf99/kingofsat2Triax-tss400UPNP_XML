@@ -13,6 +13,9 @@ P2=28.2E
 P3=23.5E
 P4=13E
 
+declare -a P
+P=($P1 $P2 $P3 $P4 )
+
 # download PHP files from kingofsat
 wget https://de.kingofsat.net/pos-$P1.php
 wget https://de.kingofsat.net/pos-$P2.php
@@ -27,15 +30,16 @@ python getchannels.py $SERVER pos-$P3.php 3
 python getchannels.py $SERVER pos-$P4.php 4
 
 # merge all xml files together
-cat *.xml >> allChannels.xml
-
-
 STR2='<?xml version="1.0" encoding="UTF-8"?><channelTable msys="DVB-S">'
 STR3='</channelTable>'
 
+echo $STR2 > allChannels.xml
+cat pos-$P*.xml >> allChannels.xml
+echo $STR3 >> allChannels.xml
 
-(echo $STR2 && cat pos-$P1.xml) > /tmp/pos-$P1.xml
-cat /tmp/pos-$P1.xml > pos-$P1.xml
+for i in "${P[@]}";
+do
+(echo $STR2 && cat pos-$i.xml) > /tmp/pos-$i.xml && cat /tmp/pos-$i.xml > pos-$i.xml && (cat pos-$i.xml && echo $STR3) >> /tmp/posN-$i.xml && cat /tmp/posN-$i.xml > pos-$i.xml ;
+done
 
-(cat pos-$P1.xml && echo $STR3) >> /tmp/posN-$P1.xml
-cat /tmp/posN-$P1.xml > pos-$P1.xml
+

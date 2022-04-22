@@ -20,14 +20,16 @@ polarity = ""
 delsys = ""
 modulation = ""
 symrate = ""
-
+NR = 0
+NT = 0
 f = open(inputFilename, "r")
 o = open(outputFilename, "w")
-
 for line in f:
 	if(newRadioChannel > 0):
 		# skip next line
-		if(newRadioChannel < 2):		
+
+		NR += 1
+		if(newRadioChannel < 2):
 			newRadioChannel = newRadioChannel + 1
 			continue
 		elif(newRadioChannel == 2):
@@ -40,6 +42,7 @@ for line in f:
 			continue
 		elif(newRadioChannel == 9):
 			#print(line)
+
 			ignore1, apid = line.split('>', 1)
 			apid = apid.split('<', 1)[0]
 			apid = apid.split('&', 1)[0]
@@ -63,8 +66,8 @@ for line in f:
                 # rtsp://@mmslave/?src=4&freq=10971&pol=h&msys=dvbs2&sr=29700&pids=0,501,502,507,503,504,505,502&x_pmt=501
 				#description = "#EXTINF:0," + channelname
 				#url = "rtsp://@" + server + "/?src=" + source + "&freq=" + frequency + "&pol=" + polarity
-				#url = url + "&msys=" + delsys + "&mtype=" + modulation + "&sr=" + symrate + "&pids=0," + apid
-				url = "<channel number=" + '"' + "1" + '"' + "><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>" + channelname + "</name><freq>" + frequency + "</freq><pol>" + polarity + "</pol><sr>" + symrate + "</sr><src>" + source + "</src><pids>" + apid + "</pids></channel>"
+				#url = url + "&msys=" + delsys + "&mtype=" + modulation + "&sr=" + symrate + "&pids=0," + apid\
+				url = "<channel number=" + '"' + str(NR) + '"' + "><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>" + channelname + "</name><freq>" + frequency + "</freq><pol>" + polarity + "</pol><sr>" + symrate + "</sr><src>" + source + "</src><pids>" + apid + "</pids></channel>"
 				for i in opidArray:
 					url = url
 		#		o.write(description + "\n")
@@ -74,8 +77,11 @@ for line in f:
 				continue
 	elif(newChannel > 0):
 		# skip next 6 lines
+
+		NT += 1
 		if(newChannel < 6):
 			newChannel = newChannel + 1
+			#Nr = Nr + 1
 			continue
 		elif(newChannel == 6):
 			ignore1, vpid = line.split('>', 1)
@@ -109,7 +115,7 @@ for line in f:
 				# #EXTINF:0,SRF 1 HD
 				# rtsp://@mmslave/?src=4&freq=10971&pol=h&msys=dvbs2&sr=29700&pids=0,501,502,507,503,504,505,502&x_pmt=501
 				#description = "#EXTINF:0," + channelname
-				url = "<channel number=" + '"' + "1" + '"' + "><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>" + channelname + "</name><freq>" + frequency + "</freq><pol>" + polarity + "</pol><sr>" + symrate + "</sr><src>" + source + "</src><pids>" + vpid + "," + apid + "</pids></channel>"
+				url = "<channel number=" + '"' + str(NT) + '"' + "><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>" + channelname + "</name><freq>" + frequency + "</freq><pol>" + polarity + "</pol><sr>" + symrate + "</sr><src>" + source + "</src><pids>" + vpid + "," + apid + "</pids></channel>"
 				#url = "rtsp://@" + server + "/?src=" + source + "&freq=" + frequency + "&pol=" + polarity
 				#url = url + "&msys=" + delsys + "&mtype=" + modulation + "&sr=" + symrate + "&pids=0," + vpid + "," + apid
 				for i in opidArray:
