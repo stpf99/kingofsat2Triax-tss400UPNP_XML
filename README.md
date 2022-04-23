@@ -1,6 +1,7 @@
 # kingofsat2Triax-tss400UPNP_XML
 kingofsat2Triax-tss400UPNP_XML
 
+this program generate playlist file for sat>ip server from internet source - "kingofsat"
 
 works but sometimes generated list is too long/ may need manual short
 
