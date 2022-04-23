@@ -42,13 +42,13 @@ cp */*.xml .
 STR2='<?xml version="1.0" encoding="UTF-8"?><channelTable msys="DVB-S">'
 STR3='</channelTable>'
 
-echo $STR2 > allChannels.xml
-cat tv-*-fta.xml >> allChannels.xml
-echo $STR3 >> allChannels.xml
+echo $STR2 > AllChannels.xml
+cat tv-*-fta.xml >> AllChannels.xml
+echo $STR3 >> AllChannels.xml
 
 for i in "${P[@]}";
 do
-awk '{ sub(/NR/, ++i-1) } 1' tv-$i-fta.xml >> /tmp/tv-$i-fta.xml (echo $STR2 && cat /tmp/tv-$i-fta.xml && echo $STR3) > /tmp/tv-$i-fta-b.xml && sed 's/&//g' /tmp/tv-$i-fta-b.xml > /tmp/tv-$i-fta-clean.xml && cat /tmp/tv-$i-fta-clean.xml > tv-$i-fta.xml && awk '{ sub(/NR/, ++i-1) } 1' SATIP_Channels.xml >> ALLChannels.xml && sed 's/&//g' allChannels.xml > SATIP_Channels.xml ;
+awk '{ sub(/NR/, ++i-1) } 1' tv-$i-fta.xml >> /tmp/tv-$i-fta.xml && (echo $STR2 && cat /tmp/tv-$i-fta.xml && echo $STR3) > /tmp/tv-$i-fta-b.xml && sed 's/&//g' /tmp/tv-$i-fta-b.xml > /tmp/tv-$i-fta-clean.xml && cat /tmp/tv-$i-fta-clean.xml > tv-$i-fta.xml && awk '{ sub(/NR/, ++i-1) } 1' AllChannels.xml >> allChannels.xml && sed 's/&//g' allChannels.xml > SATIP_Channels.xml ;
 done
 rm allChannels.xml
 
