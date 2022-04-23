@@ -14,5 +14,7 @@ P3=23.5E
 P4=28.2E
 
 then chmod +x *.sh
+
 execute:
-./*.sh
+
+./getchannels.sh
