@@ -14,6 +14,13 @@ P2=19.2E
 P3=23.5E
 P4=28.2E
 
+and language for coresponding positions 
+
+L1=pol
+L2=ger
+L3=ger
+L4=eng
+
 then chmod +x *.sh
 
 execute:
