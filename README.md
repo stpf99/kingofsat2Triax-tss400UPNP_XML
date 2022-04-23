@@ -9,7 +9,7 @@ config exist in getchannels_lang.sh file
 
 change only SAT POSITIONS for ports (1-4)
 
-P1=13.0E
+P1=13E
 P2=19.2E
 P3=23.5E
 P4=28.2E
