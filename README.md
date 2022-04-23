@@ -5,7 +5,7 @@ this program generate DLNA playlist file for sat>ip (dlna) srver from internet s
 
 works but sometimes generated list is too long/ may need manual short
 
-config exist in sh file
+config exist in getchannels_lang.sh file
 
 change only SAT POSITIONS for ports (1-4)
 
