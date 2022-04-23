@@ -48,9 +48,8 @@ echo $STR3 >> allChannels.xml
 
 for i in "${P[@]}";
 do
-(echo $STR2 && cat tv-$i-fta.xml && echo $STR3) > /tmp/tv-$i-fta.xml && sed 's/&//g' /tmp/tv-$i-fta.xml > /tmp/tv-$i-fta-clean.xml && cat /tmp/tv-$i-fta-clean.xml > tv-$i-fta.xml && sed 's/&//g' allChannels.xml > SATIP_Channels.xml && awk '{ sub(/NR/, ++i-1) } 1' tv-$i-fta.xml >  tv-$i-fta-clean.xml;
-rm tv-$i-fta.xml
+awk '{ sub(/NR/, ++i-1) } 1' tv-$i-fta.xml >> /tmp/tv-$i-fta.xml (echo $STR2 && cat /tmp/tv-$i-fta.xml && echo $STR3) > /tmp/tv-$i-fta-b.xml && sed 's/&//g' /tmp/tv-$i-fta-b.xml > /tmp/tv-$i-fta-clean.xml && cat /tmp/tv-$i-fta-clean.xml > tv-$i-fta.xml && sed 's/&//g' allChannels.xml > SATIP_Channels.xml && awk '{ sub(/NR/, ++i-1) } 1' SATIP_Channels.xml >> ALLChannels.xml;
 done
 rm allChannels.xml
-awk '{ sub(/NR/, ++i-1) } 1' SATIP_Channels.xml >> ALLChannels.xml
+
 rm SATIP_Channels.xml
