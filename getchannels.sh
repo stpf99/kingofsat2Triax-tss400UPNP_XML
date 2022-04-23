@@ -51,5 +51,3 @@ do
 awk '{ sub(/NR/, ++i-1) } 1' tv-$i-fta.xml >> /tmp/tv-$i-fta.xml && (echo $STR2 && cat /tmp/tv-$i-fta.xml && echo $STR3) > /tmp/tv-$i-fta-b.xml && sed 's/&//g' /tmp/tv-$i-fta-b.xml > /tmp/tv-$i-fta-clean.xml && cat /tmp/tv-$i-fta-clean.xml > tv-$i-fta.xml && awk '{ sub(/NR/, ++i-1) } 1' AllChannels.xml >> allChannels.xml && sed 's/&//g' allChannels.xml > SATIP_Channels.xml ;
 done
 rm allChannels.xml
-
-rm SATIP_Channels.xml
