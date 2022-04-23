@@ -25,4 +25,4 @@ then chmod +x *.sh
 
 execute:
 
-./getchannels.sh
+./getchannels_lang.sh
