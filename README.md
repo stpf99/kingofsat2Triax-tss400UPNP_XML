@@ -21,7 +21,7 @@ L2=ger
 L3=ger
 L4=eng
 
-then chmod +x *.sh
+then chmod +x getchannels_lang.sh
 
 execute:
 
