@@ -8,7 +8,7 @@ mkdir 1 2 3 4
 # cleanup old files
 rm *.php
 rm *.xml
-rm /tmp/tv*.xml
+rm /tmp/*.xml
 P1=13.0E
 P2=19.2E
 P3=23.5E
@@ -48,6 +48,6 @@ echo $STR3 >> AllChannels.xml
 
 for i in "${P[@]}";
 do
-awk '{ sub(/NR/, ++i-1) } 1' tv-$i-fta.xml >> /tmp/tv-$i-fta.xml && (echo $STR2 && cat /tmp/tv-$i-fta.xml && echo $STR3) > /tmp/tv-$i-fta-b.xml && sed 's/&//g' /tmp/tv-$i-fta-b.xml > /tmp/tv-$i-fta-clean.xml && cat /tmp/tv-$i-fta-clean.xml > tv-$i-fta.xml && awk '{ sub(/NR/, ++i-1) } 1' AllChannels.xml >> allChannels.xml && sed 's/&//g' allChannels.xml > SATIP_Channels.xml ;
+awk '{ sub(/NR/, ++i) } 1' tv-$i-fta.xml >> /tmp/tv-$i-fta.xml && (echo $STR2 && cat /tmp/tv-$i-fta.xml && echo $STR3) > /tmp/tv-$i-fta-b.xml && sed 's/&//g' /tmp/tv-$i-fta-b.xml > /tmp/tv-$i-fta-clean.xml && cat /tmp/tv-$i-fta-clean.xml > /tmp/tv-$i-fta.xml && sed 's/>V</>v</g' /tmp/tv-$i-fta.xml >> /tmp/TV-$i-FTA.xml && sed 's/>H</>h</g' /tmp/TV-$i-FTA.xml >> Tv-$i-fta.xml  && awk '{ sub(/NR/, ++i) } 1' AllChannels.xml >> allChannels.xml && sed 's/&//g' allChannels.xml > SATIP_Channels.xml && sed 's/>V</>v</g' SATIP_Channels.xml > Channels.xml && sed 's/>H</>h</g'  Channels.xml > SATIP_Channels.xml ;
 done
-rm allChannels.xml AllChannels.xml
+rm allChannels.xml AllChannels.xml tv*fta.xml
