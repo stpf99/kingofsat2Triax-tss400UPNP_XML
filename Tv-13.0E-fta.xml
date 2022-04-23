@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><channelTable msys="DVB-S">
+<channel number="1"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>TVP INFO HD</name><freq>10719</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>168,112</pids></channel>
+<channel number="2"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>NETFLIX</name><freq>10719</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>8180</pids></channel>
+<channel number="3"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>STARS.TV</name><freq>10758</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>291,547</pids></channel>
+<channel number="4"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>4Fun.TV</name><freq>10758</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>265,521</pids></channel>
+<channel number="5"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>4Fun Kids</name><freq>10758</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>276,532</pids></channel>
+<channel number="6"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>4Fun Dance</name><freq>10758</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>280,536</pids></channel>
+<channel number="7"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>Eska TV Extra</name><freq>10758</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>337,593</pids></channel>
+<channel number="8"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>TVS</name><freq>10796</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>163,92</pids></channel>
+<channel number="9"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name></name><freq>10796</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>159</pids></channel>
+<channel number="10"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>Red Carpet TV</name><freq>10834</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>168,112</pids></channel>
+<channel number="11"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>Music Box Polska</name><freq>10834</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>170,120</pids></channel>
+<channel number="12"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>ANTENA</name><freq>10892</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>164,96</pids></channel>
+<channel number="13"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>POWER TV</name><freq>10892</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>165,100</pids></channel>
+<channel number="14"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>NUTA TV</name><freq>10892</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>166,104</pids></channel>
+<channel number="15"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>GOLD TV</name><freq>10892</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>168,112</pids></channel>
+<channel number="16"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>TVC</name><freq>10892</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>169,116</pids></channel>
+<channel number="17"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>TVP Polonia</name><freq>11075</freq><pol>v</pol><sr>30000</sr><src>1</src><pids>1510,1520</pids></channel>
+<channel number="18"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>Radio ZET</name><freq>11487</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>423</pids></channel>
+<channel number="19"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>Meloradio</name><freq>11487</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>422</pids></channel>
+<channel number="20"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>Chillizet</name><freq>11487</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>420</pids></channel>
+<channel number="21"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>Antyradio</name><freq>11487</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>426</pids></channel>
+<channel number="22"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>JASNA GORA</name><freq>11487</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>427</pids></channel>
+<channel number="23"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>TOK FM</name><freq>11487</freq><pol>h</pol><sr>27500</sr><src>1</src><pids>421</pids></channel>
+<channel number="24"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>TELE 5</name><freq>11662</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>2011,2012</pids></channel>
+<channel number="25"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>Polonia 1</name><freq>11662</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>2021,2022</pids></channel>
+<channel number="26"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>TV Okazje</name><freq>12188</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>265,266</pids></channel>
+<channel number="27"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>Muzo.fm</name><freq>12188</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>721</pids></channel>
+<channel number="28"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>RMF Classic</name><freq>12188</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>722</pids></channel>
+<channel number="29"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>RMF MAXXX</name><freq>12188</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>726</pids></channel>
+<channel number="30"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>radio</type><name>Zlote Przeboje</name><freq>12188</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>728</pids></channel>
+<channel number="31"><tuneType>DVB-S-AUTO</tuneType><visible>true</visible><type>tv</type><name>TBN Poland</name><freq>12303</freq><pol>v</pol><sr>27500</sr><src>1</src><pids>8007,8107</pids></channel>
+</channelTable>
