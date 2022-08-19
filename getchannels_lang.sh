@@ -10,15 +10,15 @@ rm *.php
 rm *.xml
 rm /tmp/*.xml
 P1=13E
-P2=19.2E
-P3=23.5E
-P4=28.2E
+P2=13E
+P3=13E
+P4=13E
 declare -a P
 P=($P1 $P2 $P3 $P4 )
 
 L1=pol
 L2=ger
-L3=ger
+L3=ita
 L4=eng
 declare -a L
 L=($L1 $L2 $L3 $L4 )
