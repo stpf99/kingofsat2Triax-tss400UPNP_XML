@@ -22,7 +22,7 @@ cat tv-$P-fta-$i.xml | awk '{ sub(/NR/, ++i) } 1' |  sed 's/&//g' | sed 's/>V</>
 done
 cat TV-$P-FTA-*.xml >> AllChannels.xml
 echo $STR3 >> AllChannels.xml
-D=$(date '+Today is %A, %B %d, %Y.')
+
 mkdir ONEPOSMULTILANG/
 mv AllChannels.xml ONEPOSMULTILANG/
 rm *.php *.xml freq*
