@@ -16,8 +16,8 @@ echo $STR2 > TV-$P-FTA-langs.xml
 for i in "${L[@]}";
 do
 wget "https://de.kingofsat.net/freqs.php?&pos=$P&standard=All&ordre=freq&filtre=Clear&cl=$i"
-cat freqs*  >> tv-$P-fta-langs.php
 done
+cat freqs*  >> tv-$P-fta-langs.php
 python getchannels.py $SERVER tv-$P-fta-langs.php 1
 cat tv-$P-fta-langs.xml | awk '{ sub(/NR/, ++i) } 1' |  sed 's/&//g' | sed 's/>V</>v</g' | sed 's/>H</>h</g' >> TV-$P-FTA-langs.xml
 echo $STR3 >> TV-$P-FTA-langs.xml
