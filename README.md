@@ -26,3 +26,8 @@ then chmod +x getchannels_lang.sh
 execute:
 
 ./getchannels_lang.sh
+
+
+
+
+<img width="964" alt="diseqc" src="https://github.com/stpf99/kingofsat2Triax-tss400UPNP_XML/blob/294444d12b2b7f8f4381e30cf69a60b6c8e93691/Snapshot_2024-04-24_13-56-15.png">
