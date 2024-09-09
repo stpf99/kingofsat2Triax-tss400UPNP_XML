@@ -1,4 +1,4 @@
-python king2xml.py 13E 1 pol ger ita eng
+>>>python king2xml.py 13E 1 pol ger ita eng<<<
 
 
 # kingofsat2Triax-tss400UPNP_XML
